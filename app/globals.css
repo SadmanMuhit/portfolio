@@ -9,6 +9,8 @@
     --accent: #ff00c8;
     --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.08);
+    --font-story:  "Instrument Serif", serif;
+    --font-fira: "Fira Sans", sans-serif;
   }
 
   * {
@@ -31,6 +33,7 @@
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
+  --font-story: var(--font-story);
 }
 
 @layer utilities {

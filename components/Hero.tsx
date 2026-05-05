@@ -3,10 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Briefcase, CheckCircle } from "lucide-react";
 import ShinyButton from "./ShinyButton";
 
-import { SiWordpress, SiReact, SiNextdotjs } from "react-icons/si";
+import { SiWordpress, SiReact, SiNextdotjs, SiGoogle, SiMeta, SiNetflix, SiSpotify } from "react-icons/si";
 
 const Hero = () => {
   const skills = [
@@ -62,14 +62,14 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-pulse-slow delay-1000" />
 
-      <div className="container mx-auto px-6 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Left Content */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pt-40 pb-20 lg:py-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="px-4 py-1.5 rounded-full glass text-[10px] uppercase tracking-[0.2em] text-primary font-bold mb-6"
+            className="px-4 py-1.5 rounded-full glass text-[12px] uppercase tracking-[0.2em] text-primary font-bold mb-6"
           >
             Expert Website Developer
           </motion.div>
@@ -78,16 +78,16 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-6xl md:text-6xl font-black tracking-tight leading-[0.9] text-white mb-8"
+            className="text-5xl sm:text-7xl lg:text-5xl font-black tracking-tight leading-[0.9] text-white mb-8"
           >
-            BUILDING <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">SCALABLE</span> WEB SOLUTIONS.
+            BUILDING <span className="font-story italic">SCALABLE</span> WEB SOLUTIONS.
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg text-white/50 max-w-lg mb-10 leading-relaxed"
+            className="text-base md:text-lg text-white/50 max-w-lg mb-10 leading-relaxed"
           >
             Professional web developer specializing in high-performance WordPress sites and modern web applications with React and Next.js.
           </motion.p>
@@ -143,7 +143,7 @@ const Hero = () => {
                 <span className="text-[15px] uppercase tracking-[0.4em] text-white font-black">My Skills</span>
               </div>
               
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 {skills.map((skill, i) => (
                   <motion.div
                     key={skill.name}
@@ -162,18 +162,18 @@ const Hero = () => {
                     />
                     
                     {/* Card Content */}
-                    <div className="relative bg-black/40 backdrop-blur-2xl rounded-2xl p-4 flex items-center gap-4 border border-white/5 group-hover:border-white/10 transition-colors">
+                    <div className="relative bg-black/40 backdrop-blur-2xl rounded-2xl p-3 md:p-4 flex items-center gap-4 border border-white/5 group-hover:border-white/10 transition-colors">
                       <div 
-                        className="p-3 rounded-xl bg-white/5 border border-white/5 group-hover:scale-110 transition-transform duration-500"
+                        className="p-2 md:p-3 rounded-xl bg-white/5 border border-white/5 group-hover:scale-110 transition-transform duration-500"
                         style={{ boxShadow: `0 0 20px ${skill.color}10` }}
                       >
                         <skill.Icon 
-                          className="w-6 h-6 transition-all duration-500 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
+                          className="w-5 h-5 md:w-6 h-6 transition-all duration-500 filter drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]"
                           style={{ color: skill.color }}
                         />
                       </div>
                       <div className="flex flex-col">
-                        <span className="text-white font-bold text-sm tracking-tight">{skill.name}</span>
+                        <span className="text-white font-bold text-xs md:text-sm tracking-tight">{skill.name}</span>
                       </div>
                       <div 
                         className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
@@ -190,7 +190,7 @@ const Hero = () => {
         </div>
 
         {/* Right Visuals (Photo Frame) */}
-        <div className="relative w-full max-w-lg aspect-[4/5] flex items-center justify-center">
+        <div className="relative w-full max-w-[320px] sm:max-w-lg aspect-[4/5] flex items-center justify-center mb-20 lg:mb-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -199,7 +199,7 @@ const Hero = () => {
           >
             <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden border border-white/10">
               <Image
-                src="/my-photo.jpg"
+                src="/muhit.jpg"
                 alt="User Portrait"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-110"
@@ -210,25 +210,72 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               
               {/* Floating Name Tag */}
-              <div className="absolute bottom-6 left-6 right-6 p-4 glass rounded-xl backdrop-blur-md">
-                <div className="text-white font-bold text-lg">AVAILABLE FOR WORK</div>
-                <div className="text-white/50 text-xs uppercase tracking-widest mt-1">Based in Bangladesh</div>
+              <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 p-3 sm:p-4 glass rounded-xl backdrop-blur-md">
+                <div className="text-white font-bold text-sm sm:text-lg">AVAILABLE FOR WORK</div>
+                <div className="text-white/50 text-[10px] sm:text-xs uppercase tracking-widest mt-1">Based in Bangladesh</div>
               </div>
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-2xl animate-pulse" />
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl animate-pulse delay-700" />
+            <div className="absolute -top-4 -right-4 w-20 h-20 md:w-24 md:h-24 bg-primary/20 rounded-full blur-2xl animate-pulse" />
+            <div className="absolute -bottom-4 -left-4 w-20 h-20 md:w-24 md:h-24 bg-secondary/20 rounded-full blur-2xl animate-pulse delay-700" />
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      {/* Client Marquee */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8 }}
+        className="absolute bottom-0 w-full border-t border-white/5 bg-black/20 backdrop-blur-md py-4 md:py-6 overflow-hidden"
+      >
+        <div className="flex items-center gap-8 whitespace-nowrap overflow-hidden">
+          <motion.div 
+            animate={{ x: ["-50%", "0%"] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="flex items-center gap-8 md:gap-16 pr-8 md:pr-16"
+          >
+            {[
+              { name: "Google", Icon: SiGoogle },
+              { name: "Meta", Icon: SiMeta },
+              { name: "Netflix", Icon: SiNetflix },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              // Duplicate for infinite loop
+              { name: "Google", Icon: SiGoogle },
+              { name: "Meta", Icon: SiMeta },
+              { name: "Netflix", Icon: SiNetflix },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+              { name: "Spotify", Icon: SiSpotify },
+            ].map((client, i) => (
+              <div key={i} className="flex items-center gap-2 md:gap-3 group">
+                <client.Icon className="w-5 h-5 md:w-6 h-6 text-white group-hover:text-white transition-colors duration-500" />
+                <span className="text-white group-hover:text-white font-bold tracking-widest text-xs md:text-[15px] uppercase transition-colors duration-500">
+                  {client.name}
+                </span>
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.div>
+
+      {/* Scroll Indicator (Moved up slightly) */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-24 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className="text-[10px] uppercase tracking-[0.3em] text-white/30">Scroll</span>
         <div className="w-px h-12 bg-gradient-to-b from-primary to-transparent" />

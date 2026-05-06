@@ -28,9 +28,9 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden mesh-gradient">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden mesh-gradient">
       {/* Navigation */}
-      <nav className="absolute top-0 w-full p-8 flex justify-between items-center z-50 max-w-7xl">
+      <nav className="absolute top-0 w-full p-5 md:p-8 flex justify-between items-center z-50 max-w-7xl">
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -64,7 +64,7 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Left Content */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pt-40 pb-20 lg:py-0">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pt-32 pb-16 md:pt-40 md:pb-20 lg:py-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-5xl sm:text-7xl lg:text-5xl font-black tracking-tight leading-[0.9] text-white mb-8"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[0.9] text-white mb-6 md:mb-8"
           >
             BUILDING <span className="font-story italic">SCALABLE</span> WEB SOLUTIONS.
           </motion.h1>
@@ -138,12 +138,12 @@ const Hero = () => {
 
             {/* Advanced Tech Stack UI */}
             <div className="mt-4 flex flex-col gap-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center lg:justify-start gap-3">
                 <div className="h-px w-8 bg-gradient-to-r from-primary to-transparent" />
                 <span className="text-[15px] uppercase tracking-[0.4em] text-white font-black">My Skills</span>
               </div>
               
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4">
                 {skills.map((skill, i) => (
                   <motion.div
                     key={skill.name}
@@ -190,7 +190,7 @@ const Hero = () => {
         </div>
 
         {/* Right Visuals (Photo Frame) */}
-        <div className="relative w-full max-w-[320px] sm:max-w-lg aspect-[4/5] flex items-center justify-center mb-20 lg:mb-0">
+        <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-lg aspect-[4/5] flex items-center justify-center mt-10 mb-28 lg:my-0">
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -228,7 +228,7 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.8 }}
-        className="absolute bottom-0 w-full border-t border-white/5 bg-black/20 backdrop-blur-md py-4 md:py-6 overflow-hidden"
+        className="absolute bottom-0 w-full border-t border-white/5 bg-black/40 backdrop-blur-xl py-3 md:py-5 overflow-hidden z-20"
       >
         <div className="flex items-center gap-8 whitespace-nowrap overflow-hidden">
           <motion.div 

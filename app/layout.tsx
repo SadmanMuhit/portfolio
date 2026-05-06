@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
-import { Outfit, Instrument_Serif } from "next/font/google";
+import {
+  Outfit,
+  Instrument_Serif,
+  Noto_Sans,
+  Playfair_Display,
+} from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { ThemeProvider } from "next-themes";
+import Navbar from "@/components/shadcn-space/blocks/navbar-01/navbar";
+import Footer2 from "@/components/common component/cta-01/footer/footer";
+
+const playfairDisplayHeading = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-heading",
+});
+
+const notoSans = Noto_Sans({ subsets: ["latin"], variable: "--font-sans" });
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -16,7 +32,8 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: "Creative Portfolio | Digital Experiences",
-  description: "Specializing in high-performance web applications and immersive digital designs.",
+  description:
+    "Specializing in high-performance web applications and immersive digital designs.",
 };
 
 export default function RootLayout({
@@ -25,8 +42,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${instrumentSerif.variable} h-full antialiased dark`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+    <html
+      lang="en"
+      className={cn(
+        "h-full",
+        "antialiased",
+        outfit.variable,
+        instrumentSerif.variable,
+        "font-sans",
+        notoSans.variable,
+        playfairDisplayHeading.variable,
+      )}
+      suppressHydrationWarning
+    >
+      <body className="min-h-full flex flex-col font-sans">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+           <Navbar />
+          {children}
+          <Footer2 />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

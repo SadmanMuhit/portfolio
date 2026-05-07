@@ -38,14 +38,47 @@ const Hero = () => {
   ];
 
   return (
+<<<<<<< HEAD:components/home/Hero.tsx
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden mesh-gradient">
+=======
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-x-hidden mesh-gradient">
+      {/* Navigation */}
+      <nav className="absolute top-0 w-full p-5 md:p-8 flex justify-between items-center z-50 max-w-7xl">
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="text-2xl font-bold tracking-tighter text-white"
+        >
+          PORTFOLIO<span className="text-primary">.</span>
+        </motion.div>
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="hidden md:flex gap-8 text-base font-medium text-white/60"
+        >
+          {["Work", "About", "Services", "Contact"].map((item) => (
+            <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-primary transition-colors uppercase tracking-widest text-[15px]">
+              {item}
+            </a>
+          ))}
+        </motion.div>
+        <motion.div
+           initial={{ opacity: 0, x: 20 }}
+           animate={{ opacity: 1, x: 0 }}
+           className="flex gap-4"
+        >
+           <ShinyButton className="!px-6 !py-2 text-sm">Let's Talk</ShinyButton>
+        </motion.div>
+      </nav>
+
+>>>>>>> ab1dfba3f2cc4b470965e1be4c780566e19b9f2c:components/Hero.tsx
       {/* Background Decor */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-slow" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-[120px] animate-pulse-slow delay-1000" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Left Content */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pt-40 pb-20 lg:py-0">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl pt-32 pb-16 md:pt-40 md:pb-20 lg:py-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -59,7 +92,11 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
+<<<<<<< HEAD:components/home/Hero.tsx
             className="text-5xl sm:text-7xl lg:text-7xl font-black tracking-tight leading-20 text-foreground mb-8"
+=======
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[0.9] text-white mb-6 md:mb-8"
+>>>>>>> ab1dfba3f2cc4b470965e1be4c780566e19b9f2c:components/Hero.tsx
           >
             BUILDING <span className="font-story italic">SCALABLE WEB </span>
             SOLUTIONS.
@@ -126,6 +163,7 @@ const Hero = () => {
 
             {/* Advanced Tech Stack UI */}
             <div className="mt-4 flex flex-col gap-6">
+<<<<<<< HEAD:components/home/Hero.tsx
               <div className="flex items-center gap-3">
                 <div className="h-px w-8 bg-linear-to-r from-primary to-transparent" />
                 <span className="text-[15px] uppercase tracking-[0.4em] text-foreground font-black">
@@ -134,6 +172,14 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+=======
+              <div className="flex items-center justify-center lg:justify-start gap-3">
+                <div className="h-px w-8 bg-gradient-to-r from-primary to-transparent" />
+                <span className="text-[15px] uppercase tracking-[0.4em] text-white font-black">My Skills</span>
+              </div>
+              
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 md:gap-4">
+>>>>>>> ab1dfba3f2cc4b470965e1be4c780566e19b9f2c:components/Hero.tsx
                 {skills.map((skill, i) => (
                   <motion.div
                     key={skill.name}
@@ -182,7 +228,11 @@ const Hero = () => {
         </div>
 
         {/* Right Visuals (Photo Frame) */}
+<<<<<<< HEAD:components/home/Hero.tsx
         <div className="relative w-full max-w-[320px] sm:max-w-lg aspect-4/5 flex items-center justify-center mb-20 lg:mb-0">
+=======
+        <div className="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[400px] lg:max-w-lg aspect-[4/5] flex items-center justify-center mt-10 mb-28 lg:my-0">
+>>>>>>> ab1dfba3f2cc4b470965e1be4c780566e19b9f2c:components/Hero.tsx
           <motion.div
             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -224,7 +274,11 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.8 }}
+<<<<<<< HEAD:components/home/Hero.tsx
         className="absolute bottom-0 w-full border-t border-border/20 bg-background/80 dark:bg-black/20 backdrop-blur-md py-4 md:py-6 overflow-hidden"
+=======
+        className="absolute bottom-0 w-full border-t border-white/5 bg-black/40 backdrop-blur-xl py-3 md:py-5 overflow-hidden z-20"
+>>>>>>> ab1dfba3f2cc4b470965e1be4c780566e19b9f2c:components/Hero.tsx
       >
         <div className="flex items-center gap-8 whitespace-nowrap overflow-hidden">
           <motion.div

@@ -8,8 +8,8 @@ import {
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/shadcn-space/blocks/navbar-01/navbar";
 import Footer2 from "@/components/common component/cta-01/footer/footer";
+import { Navbar } from "@/components/shadcn-space/blocks/navbar-01/navbar";
 
 const playfairDisplayHeading = Playfair_Display({
   subsets: ["latin"],
@@ -62,8 +62,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-           <Navbar />
           {children}
+          <Navbar />
           <Footer2 />
         </ThemeProvider>
       </body>

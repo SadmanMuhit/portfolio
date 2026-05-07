@@ -1,151 +1,67 @@
-"use client";
-import Logo from "@/assets/logo/logo";
-import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
+import React from "react";
+import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import { cn } from "@/lib/utils";
-import { ArrowUpRight, TextAlignJustify } from "lucide-react";
-import { useCallback, useEffect, useState } from "react";
+  FiHome,
+  FiClipboard,
+  FiSend,
+} from "react-icons/fi";
+import { UserRound } from "lucide-react";
+export function Navbar() {
+  const links = [
+    {
+      title: "Home",
+      icon: (
+        <FiHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
 
-export type NavigationSection = {
-  title: string;
-  href: string;
-};
+    {
+      title: "About",
+      icon: (
+        <FiClipboard className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "Aceternity UI",
+      icon: (
+        <img
+          src="https://assets.aceternity.com/logo-dark.png"
+          width={20}
+          height={20}
+          alt="Aceternity Logo"
+        />
+      ),
+      href: "/",
+    },
+    {
+      title: "Portfolio",
+      icon: (
+        <UserRound className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
 
-const navigationData: NavigationSection[] = [
-  {
-    title: "About us",
-    href: "#",
-  },
-  {
-    title: "Services",
-    href: "#",
-  },
-  {
-    title: "Work",
-    href: "#",
-  },
-  {
-    title: "Team",
-    href: "#",
-  },
-  {
-    title: "Pricing",
-    href: "#",
-  },
-  {
-    title: "Awards",
-    href: "#",
-  },
-];
-
-const CollaborateButton = ({ className }: { className?: string }) => (
-  <Button
-    className={cn(
-      "relative text-sm font-medium rounded-full h-10 p-1 ps-4 pe-12 group transition-all duration-500 hover:ps-12 hover:pe-4 w-fit overflow-hidden hover:bg-primary/80",
-      className,
-    )}
-  >
-    <span className="relative z-10 transition-all duration-500 hover:cursor-pointer">
-      Let's Talk
-    </span>
-    <div className="absolute right-1 w-8 h-8 bg-background text-foreground rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-36px)] group-hover:rotate-45">
-      <ArrowUpRight size={16} />
-    </div>
-  </Button>
-);
-
-const Navbar = () => {
-  const [sticky, setSticky] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
-  const handleScroll = useCallback(() => {
-    setSticky(window.scrollY >= 50);
-  }, []);
-
-  const handleResize = useCallback(() => {
-    if (window.innerWidth >= 768) setIsOpen(false);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [handleScroll, handleResize]);
-
+    {
+      title: "Contact",
+      icon: (
+        <FiSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+  ];
   return (
-    <div className="bg-red-600">
-      <header>
-        <div className="max-w-7xl mx-auto w-full px-4 py-4 sm:px-6">
-          <nav
-            className={cn(
-              "w-full flex items-center h-fit justify-between gap-3.5 lg:gap-6 transition-all duration-500",
-            )}
-          >
-            <a href="/">
-              <Logo />
-            </a>
-            <div>
-              <NavigationMenu className="max-lg:hidden bg-muted p-0.5 rounded-full">
-                <NavigationMenuList className="flex gap-0">
-                  {navigationData.map((navItem) => (
-                    <NavigationMenuItem key={navItem.title}>
-                      <NavigationMenuLink
-                        href={navItem.href}
-                        className="px-2 lg:px-4 py-2 text-sm font-medium rounded-full text-muted-foreground hover:text-foreground hover:bg-background outline outline-transparent hover:outline-border hover:shadow-xs transition tracking-normal"
-                      >
-                        {navItem.title}
-                      </NavigationMenuLink>
-                    </NavigationMenuItem>
-                  ))}
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-            <div className="hidden lg:flex items-center gap-3">
-              <ThemeToggle />
-              <CollaborateButton className="lg:flex" />
-            </div>
-
-            <div className="lg:hidden">
-              <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
-                <DropdownMenuTrigger className="rounded-full bg-background border border-border p-2 outline-none flex items-center justify-center cursor-pointer text-foreground transition-colors">
-                  <TextAlignJustify size={20} />
-                  <span className="sr-only">Menu</span>
-                </DropdownMenuTrigger>
-
-                <DropdownMenuContent align="end" className="w-56 mt-2">
-                  {navigationData.map((item) => (
-                    <DropdownMenuItem key={item.title}>
-                      <a
-                        href={item.href}
-                        className="w-full cursor-pointer text-sm font-medium"
-                      >
-                        {item.title}
-                      </a>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
-          </nav>
-        </div>
-      </header>
+    <div className="flex items-center justify-center    w-full">
+      <FloatingDock
+      desktopClassName="
+      fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999]
+      backdrop-blur-md bg-white/30 dark:bg-black/30
+      border border-white/20 shadow-2xl
+    "
+        mobileClassName="translate-y-20" // only for demo, remove for production
+        items={links}
+      />
     </div>
   );
-};
-
-export default Navbar;
+}

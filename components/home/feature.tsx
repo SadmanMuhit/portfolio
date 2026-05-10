@@ -1,16 +1,7 @@
 import {
   Blocks,
-  ChartLine,
-  Globe,
-  Layers,
-  Lock,
-  Palette,
+  Code2,
   Rocket,
-  Settings,
-  Shield,
-  Sparkles,
-  Workflow,
-  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -39,30 +30,30 @@ interface FeatureIconListProps {
   className?: string;
 }
 
-interface Feature43Props extends FeatureIconListProps {}
+type Feature43Props = FeatureIconListProps
 type Props = Partial<Feature43Props>;
 
 const defaultProps: Feature43Props = {
   heading: "Build faster with production ready features",
   features: [
     {
-      icon: (<div className="bg-green-500/40 rounded-full p-3"><Zap className="5" /></div>
+      icon: (<div className="bg-green-500/40 rounded-full p-3"><Blocks className="5" /></div>
       ),
-      title: "Wardpress Theme Customization",
+      title: "WordPress Theme Customization",
       description:
       "WordPress theme customization improves design, layouts, colors, and features for responsive user-friendly websites.",
     },
     {
-      icon: <Palette className="size-5" />,
-      title: "Morden Fast",
+      icon: (<div className="bg-yellow-500/40 rounded-full p-3"><Rocket className="size-5" /></div>),
+      title: "Modern Fast website design",
       description:
-        "Every block adapts seamlessly from mobile to desktop with Tailwind's mobile-first utility classes.",
+        "Modern fast website designs ensure smooth performance, responsive layouts, engaging visuals, and better experiences.",
     },
     {
-      icon: <Shield className="size-5" />,
+      icon: (<div className="bg-blue-500/40 rounded-full p-3"><Code2 className="size-5" /></div>),
       title: "Custom Website Development",
       description:
-        "Built on Radix UI primitives with proper ARIA attributes, keyboard navigation, and focus management.",
+        "Custom website development creates scalable, responsive, high-performance websites tailored perfectly for business growth. ",
     },
   ],
 };

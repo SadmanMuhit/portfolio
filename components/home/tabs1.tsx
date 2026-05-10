@@ -146,7 +146,7 @@ export default function TabsDemo() {
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
-        className="mx-auto w-full md:w-400"
+        className="mx-auto w-full md:w-300"
       >
         <TabsList className="border-b w-full gap-1 rounded-b-none bg-muted/70 justify-center">
           {tabItems.map((tab) => (

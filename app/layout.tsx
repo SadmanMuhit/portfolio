@@ -31,7 +31,7 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Creative Portfolio | Digital Experiences",
+  title: "Portfolio",
   description:
     "Specializing in high-performance web applications and immersive digital designs.",
 };

@@ -2,14 +2,13 @@
 import React from "react";
 import Logo from "@/assets/logo/logo";
 
-function Footer2() {
+function  Footer2() {
   const navLinks = [
-    { name: "Features", href: "#" },
-    { name: "Solution", href: "#" },
-    { name: "Customers", href: "#" },
-    { name: "Pricing", href: "#" },
-    { name: "Help", href: "#" },
+    { name: "Home", href: "#" },
     { name: "About", href: "#" },
+    { name: "Services", href: "#" },
+    { name: "Portfolio", href: "#" },
+    { name: "Contact", href: "#" },
   ];
 
   const socialIcons = [

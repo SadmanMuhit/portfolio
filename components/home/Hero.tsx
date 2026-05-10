@@ -42,6 +42,13 @@ const Hero = () => {
     { name: "Meta", Icon: SiMeta },
     { name: "Netflix", Icon: SiNetflix },
     { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
+    { name: "Spotify", Icon: SiSpotify },
   ];
 
   return (
@@ -209,9 +216,9 @@ const Hero = () => {
       {/* ================= CLIENT MARQUEE ================= */}
       <div className="absolute bottom-0 left-0 w-full border-t border-white/10 bg-black/30 backdrop-blur-xl py-4 overflow-hidden z-20">
         <motion.div
-          animate={{ x: ["0%", "-50%"] }}
+          animate={{ x: ["-50%", "0%"] }}
           transition={{
-            duration: 18,
+            duration: 50,
             repeat: Infinity,
             ease: "linear",
           }}

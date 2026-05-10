@@ -31,9 +31,12 @@ const instrumentSerif = Instrument_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Sadman Muhit - frontend developer",
   description:
     "Specializing in high-performance web applications and immersive digital designs.",
+    icons: {
+      icon: "/favicon.ico",
+    }
 };
 
 export default function RootLayout({

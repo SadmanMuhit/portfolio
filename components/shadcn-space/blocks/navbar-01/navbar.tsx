@@ -10,7 +10,7 @@ export function Navbar() {
       icon: (
         <FiGlobe className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#services",
     },
 
     {
@@ -37,7 +37,7 @@ export function Navbar() {
       icon: (
         <UserRound className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#portfolio",
     },
 
     {
@@ -49,7 +49,7 @@ export function Navbar() {
     },
   ];
   return (
-    <div className="flex items-center justify-center    w-full">
+    <div className="flex items-center justify-center w-full">
       <FloatingDock
         desktopClassName="
       fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999]

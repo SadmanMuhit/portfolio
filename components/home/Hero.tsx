@@ -79,7 +79,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-5xl font-black leading-[0.9] tracking-tight text-white"
+            className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl xl:text-5xl font-black leading-[0.9] tracking-tight text-primary"
           >
             BUILDING{" "}
             <span className="italic font-story text-primary">SCALABLE WEB</span>{" "}
@@ -91,7 +91,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="mt-6 text-sm sm:text-base md:text-lg text-white/70 max-w-xl leading-relaxed"
+            className="mt-6 text-sm sm:text-base md:text-lg text-primary/70 max-w-xl leading-relaxed"
           >
             Professional web developer specializing in high-performance
             WordPress websites and modern web applications with React and
@@ -128,7 +128,7 @@ const Hero = () => {
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-6">
               <div className="w-8 h-px bg-linear-to-r from-primary to-transparent" />
 
-              <span className="text-xs sm:text-sm uppercase tracking-[0.3em] text-white font-bold">
+              <span className="text-xs sm:text-sm uppercase tracking-[0.3em] font-bold text-primary">
                 My Skills
               </span>
             </div>
@@ -158,7 +158,7 @@ const Hero = () => {
                       />
                     </div>
 
-                    <span className="text-white text-sm font-semibold">
+                    <span className="text-primary text-sm font-semibold">
                       {skill.name}
                     </span>
                   </div>
@@ -243,7 +243,7 @@ const Hero = () => {
         transition={{ delay: 1.5 }}
         className="hidden md:flex absolute bottom-24 left-1/2 -translate-x-1/2 flex-col items-center gap-2"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-white/40">
+        <span className="text-[12px] uppercase tracking-[0.3em] text-primary/40">
           Scroll
         </span>
 

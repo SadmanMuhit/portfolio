@@ -133,7 +133,7 @@ export default function TabsDemo() {
   const displayedProjects = getProjectsByCategory(activeTab);
 
   return (
-    <div>
+    <div id="portfolio">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

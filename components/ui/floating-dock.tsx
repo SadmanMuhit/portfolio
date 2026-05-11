@@ -198,6 +198,6 @@ function IconContainer({
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </a> 
   );
 }

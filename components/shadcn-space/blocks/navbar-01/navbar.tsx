@@ -3,6 +3,7 @@ import { FloatingDock } from "@/components/ui/floating-dock";
 import { FiClipboard, FiSend, FiGlobe } from "react-icons/fi";
 import { UserRound } from "lucide-react";
 import Image from "next/image";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 export function Navbar() {
   const links = [
     {
@@ -45,7 +46,12 @@ export function Navbar() {
       icon: (
         <FiSend className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#contact",
+    },
+    {
+      title: "ThemeToggle",
+      icon: <ThemeToggle />,
+      href: "",
     },
   ];
   return (

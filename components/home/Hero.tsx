@@ -105,17 +105,21 @@ const Hero = () => {
             transition={{ delay: 0.5 }}
             className="mt-10 flex flex-col sm:flex-row items-center gap-5 w-full sm:w-auto"
           >
-            <Button className="relative w-full sm:w-auto text-sm font-medium rounded-full h-12 px-6 pr-14 group overflow-hidden">
-              <span className="relative z-10">View My Work</span>
+            <Button asChild className="relative w-full sm:w-auto text-sm font-medium rounded-full h-12 px-6 pr-14 group overflow-hidden">
+              <a href="#portfolio">
+                <span className="relative z-10">View My Work</span>
 
               <div className="absolute right-1 w-10 h-10 bg-background text-foreground rounded-full flex items-center justify-center transition-all duration-500 group-hover:right-[calc(100%-44px)] group-hover:rotate-45">
                 <ArrowUpRight size={16} />
               </div>
+              </a>
             </Button>
 
-            <ShinyButton className="w-full sm:w-auto px-6! py-3! text-sm">
+            <a href="#contact">
+              <ShinyButton className="w-full sm:w-auto px-6! py-3! text-sm">
               Hire Me
             </ShinyButton>
+            </a>
           </motion.div>
 
           {/* ================= SKILLS ================= */}
@@ -150,7 +154,7 @@ const Hero = () => {
                     }}
                   />
 
-                  <div className="relative bg-white/10 backdrop-blur-xl border border-white/10 rounded-2xl px-4 py-3 flex items-center gap-3">
+                  <div className="relative bg-black text-white dark:bg-white/10 dark:text-white backdrop-blur-xl border border-black/10 dark:border-white/10 rounded-2xl px-4 py-3 flex items-center gap-3">
                     <div className="p-2 rounded-xl bg-white/10">
                       <skill.Icon
                         className="w-5 h-5 sm:w-6 sm:h-6"
@@ -158,7 +162,7 @@ const Hero = () => {
                       />
                     </div>
 
-                    <span className="text-primary text-sm font-semibold">
+                    <span className="text-white text-sm font-semibold">
                       {skill.name}
                     </span>
                   </div>
